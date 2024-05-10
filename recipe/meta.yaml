@@ -10,6 +10,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
   sha256: 9ff1f5b9e3a5ba85b8cda0d92b60587eec356cbe1d6cdc7491baa2b179d1482e
 
+
 build:
   number: 0
   noarch: python
@@ -30,6 +31,7 @@ requirements:
     - sympy >=1.10.1
     - tensorflow >=2.10.0
     - xarray >=0.20.2
+    - scipy >=1.7.3
 
 test:
   imports:
