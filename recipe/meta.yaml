@@ -1,9 +1,5 @@
 {% set name = "va_am" %}
-<<<<<<< Updated upstream
-{% set version = "0.0.4" %}
-=======
 {% set version = "0.1.4" %}
->>>>>>> Stashed changes
 
 
 package:
@@ -12,11 +8,8 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
-<<<<<<< Updated upstream
-  sha256: 686f88946a46e58282404a50cb3a40e914828ca601bbce46e2d6150ab778ef5e
-=======
   sha256: fa4abea38c10f37c8b1acae79f58b6d92f8d66921dcf2bd64cea8cfa33187586
->>>>>>> Stashed changes
+
 
 build:
   number: 0
@@ -38,6 +31,7 @@ requirements:
     - sympy >=1.10.1
     - tensorflow >=2.10.0
     - xarray >=0.20.2
+    - scipy >=1.7.3
 
 test:
   imports:
