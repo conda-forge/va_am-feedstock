@@ -10,6 +10,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
   sha256: d096df38169612b7c9d76a6a0eee23b9cd3b1ee70730d23bfce50a39ad6676e9
 
+
 build:
   number: 0
   noarch: python
