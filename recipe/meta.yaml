@@ -1,5 +1,5 @@
 {% set name = "va_am" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.8" %}
 
 
 package:
@@ -8,8 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
-  sha256: fa4abea38c10f37c8b1acae79f58b6d92f8d66921dcf2bd64cea8cfa33187586
-
+  sha256: 0c8f86cb4a2a5631dcb696802713bd1dd5164c100fdf9299b923116c08406360
 
 build:
   number: 0
@@ -22,16 +21,16 @@ requirements:
     - python >=3.7
   run:
     - keras >=2.10.0
-    - matplotlib-base >=3.5.3
+    - matplotlib-base >=3.8.4
     - netcdf4
     - numpy >=1.21.6
-    - pandas >=1.2.3
+    - pandas >=2.0.3
     - python >=3.7
     - requests >=2.31.0
     - sympy >=1.10.1
     - tensorflow >=2.10.0
-    - xarray >=0.20.2
-    - scipy >=1.7.3
+    - xarray >=2023.6.0
+    - scipy >=1.11.4
 
 test:
   imports:
