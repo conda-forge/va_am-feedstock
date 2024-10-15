@@ -1,5 +1,5 @@
-{% set name = "va_am" %}
-{% set version = "0.1.8" %}
+{% set name = "va-am" %}
+{% set version = "0.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
-  sha256: 0c8f86cb4a2a5631dcb696802713bd1dd5164c100fdf9299b923116c08406360
+  sha256: f72adadbee5c98d19975b53ca2bca0d106f0d1a48dfbcf45e1f6b002d68eba93
 
 build:
   number: 0
@@ -43,7 +43,7 @@ test:
 about:
   home: https://pypi.org/project/va-am/
   summary: VA-AM method implementation
-  license: GPL-3.0-or-later
+  license: GPL-3.0
   license_file: LICENSE
 
 extra:
