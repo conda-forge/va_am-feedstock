@@ -1,11 +1,11 @@
-About va_am-feedstock
+About va-am-feedstock
 =====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/va_am-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/va-am/
 
-Package license: GPL-3.0-or-later
+Package license: GPL-3.0
 
 Summary: VA-AM method implementation
 
@@ -27,53 +27,53 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-va_am-green.svg)](https://anaconda.org/conda-forge/va_am) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/va_am.svg)](https://anaconda.org/conda-forge/va_am) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/va_am.svg)](https://anaconda.org/conda-forge/va_am) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/va_am.svg)](https://anaconda.org/conda-forge/va_am) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-va--am-green.svg)](https://anaconda.org/conda-forge/va-am) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/va-am.svg)](https://anaconda.org/conda-forge/va-am) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/va-am.svg)](https://anaconda.org/conda-forge/va-am) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/va-am.svg)](https://anaconda.org/conda-forge/va-am) |
 
-Installing va_am
+Installing va-am
 ================
 
-Installing `va_am` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `va-am` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `va_am` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `va-am` can be installed with `conda`:
 
 ```
-conda install va_am
-```
-
-or with `mamba`:
-
-```
-mamba install va_am
-```
-
-It is possible to list all of the versions of `va_am` available on your platform with `conda`:
-
-```
-conda search va_am --channel conda-forge
+conda install va-am
 ```
 
 or with `mamba`:
 
 ```
-mamba search va_am --channel conda-forge
+mamba install va-am
+```
+
+It is possible to list all of the versions of `va-am` available on your platform with `conda`:
+
+```
+conda search va-am --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search va-am --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search va_am --channel conda-forge
+mamba repoquery search va-am --channel conda-forge
 
-# List packages depending on `va_am`:
-mamba repoquery whoneeds va_am --channel conda-forge
+# List packages depending on `va-am`:
+mamba repoquery whoneeds va-am --channel conda-forge
 
-# List dependencies of `va_am`:
-mamba repoquery depends va_am --channel conda-forge
+# List dependencies of `va-am`:
+mamba repoquery depends va-am --channel conda-forge
 ```
 
 
@@ -118,17 +118,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating va_am-feedstock
+Updating va-am-feedstock
 ========================
 
-If you would like to improve the va_am recipe or build a new
+If you would like to improve the va-am recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/va_am-feedstock are
+Note that all branches in the conda-forge/va-am-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
