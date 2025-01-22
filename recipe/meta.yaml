@@ -1,6 +1,5 @@
-{% set name = "va-am" %}
+{% set name = "va_am" %}
 {% set version = "0.2.1" %}
-
 
 
 package:
