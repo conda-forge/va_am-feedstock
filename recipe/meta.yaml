@@ -18,19 +18,20 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - keras >=2.10.0
     - matplotlib-base >=3.8.4
     - netcdf4
     - numpy >=1.21.6
     - pandas >=2.0.3
-    - python >=3.7
+    - python >={{ python_min }}
     - requests >=2.31.0
     - sympy >=1.10.1
     - tensorflow >=2.10.0
     - xarray >=2023.6.0
     - scipy >=1.11.4
+    - seaborn >=0.13.2
 
 test:
   imports:
@@ -39,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/va-am/
