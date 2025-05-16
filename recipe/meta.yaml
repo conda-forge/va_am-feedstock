@@ -1,5 +1,5 @@
 {% set name = "va_am" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
-  sha256: 03c6c8cf14755b947c4ee15470c94f9720930e97a9ac31ebe584a33b19ac00da
+  sha256: c3ef4f5acbaf8b4324daf1bdedfc41962af5f0bc48ebb1c1b971610e90e31da2
 
 build:
   number: 0
