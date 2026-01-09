@@ -1,51 +1,52 @@
 {% set name = "va_am" %}
 {% set version = "1.0.1" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
   sha256: bb92a9ffc91adb5c627016d481cbf60152694b357657aa8617427146c284088c
 
 build:
-  number: 0
+  entry_points:
+    - my-script = scripts.main:mn
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
+    - python >=3.7
+    - setuptools
     - pip
-    - python {{ python_min }}
   run:
     - keras >=2.10.0
     - matplotlib-base >=3.8.4
     - netcdf4
     - numpy >=1.21.6
     - pandas >=2.0.3
-    - python >={{ python_min }}
+    - python >=3.7
     - requests >=2.31.0
     - sympy >=1.10.1
     - tensorflow >=2.10.0
     - xarray >=2023.6.0
     - scipy >=1.11.4
-    - seaborn >=0.13.2
 
 test:
   imports:
     - va_am
   commands:
     - pip check
+    - my-script --help
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/va-am/
   summary: VA-AM method implementation
-  license: EUPL-1.2
+  license: 'EUPL-1.2'
   license_file: LICENSE
 
 extra:
