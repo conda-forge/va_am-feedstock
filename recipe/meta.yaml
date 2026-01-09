@@ -48,8 +48,8 @@ test:
 about:
   home: https://pypi.org/project/va-am/
   summary: VA-AM method implementation
-  license: EUPL-1.2
-  license_file: licenses/LICENCE
+  license: "EUPL-1.2"
+  license_file: "LICENSE"
 
 extra:
   recipe-maintainers:
