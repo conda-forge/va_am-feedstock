@@ -38,6 +38,10 @@ test:
     - va_am
   commands:
     - pip check
+    - echo "=== DEBUG: Checking recipe directory ==="
+    - ls -la /home/conda/recipe_root/
+    - echo "=== DEBUG: Looking for LICENSE files ==="
+    - find /home/conda/recipe_root -name "*license*" -o -name "*LICENSE*" -type f
   requires:
     - pip
     - python {{ python_min }}
