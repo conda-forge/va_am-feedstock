@@ -10,8 +10,6 @@ source:
   sha256: bb92a9ffc91adb5c627016d481cbf60152694b357657aa8617427146c284088c
 
 build:
-  entry_points:
-    - my-script = scripts.main:mn
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -40,7 +38,6 @@ test:
     - va_am
   commands:
     - pip check
-    - my-script --help
   requires:
     - pip
     - python {{ python_min }}
