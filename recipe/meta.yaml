@@ -27,7 +27,7 @@ requirements:
     - netcdf4
     - numpy >=1.21.6
     - pandas >=2.0.3
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - requests >=2.31.0
     - sympy >=1.10.1
     - tensorflow >=2.10.0
