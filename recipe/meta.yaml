@@ -1,24 +1,24 @@
 {% set name = "va_am" %}
-{% set version = "0.2.3" %}
-
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
-  sha256: c3ef4f5acbaf8b4324daf1bdedfc41962af5f0bc48ebb1c1b971610e90e31da2
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/va_am-{{ version }}.tar.gz
+  sha256: bb92a9ffc91adb5c627016d481cbf60152694b357657aa8617427146c284088c
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
+    - setuptools
+    - pip
   run:
     - keras >=2.10.0
     - matplotlib-base >=3.8.4
@@ -38,10 +38,6 @@ test:
     - va_am
   commands:
     - pip check
-    - echo "=== DEBUG: Checking recipe directory ==="
-    - ls -la /home/conda/recipe_root/
-    - echo "=== DEBUG: Looking for LICENSE files ==="
-    - find /home/conda/recipe_root -name "*license*" -o -name "*LICENSE*" -type f
   requires:
     - pip
     - python {{ python_min }}
@@ -49,8 +45,7 @@ test:
 about:
   home: https://pypi.org/project/va-am/
   summary: VA-AM method implementation
-  license: GPL-3.0-or-later
-  license_file: LICENSE
+  license: "EUPL-1.2"
 
 extra:
   recipe-maintainers:
